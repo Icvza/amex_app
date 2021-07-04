@@ -37,8 +37,5 @@ class ExpenseService {
             const v = new Expense(expense)
             v.addToDom()
         })
-
     }
-
-
 }

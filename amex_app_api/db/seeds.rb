@@ -6,13 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 # Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: 'Isaac')
-User.create(name: 'Maria')
-User.create(name: 'Luciano')
-User.create(name: 'Josh')
 
-Card.create(name: 'Gold', welcome_o: '10,000', minimum_spend: '25,000', user_id: 1)
-Card.create(name: 'Green', welcome_o: '10,000', minimum_spend: '25,000', user_id: 1)
-Card.create(name: 'Platnium', welcome_o: '10,000', minimum_spend: '25,000', user_id: 1)
-Card.create(name: 'Centrurion', welcome_o: '10,000', minimum_spend: '25,000', user_id: 1)
+Category.create(name: 'Gold')
+Category.create(name: 'Green')
+Category.create(name: 'Platnium')
+Category.create(name: 'Centrurion')
 
