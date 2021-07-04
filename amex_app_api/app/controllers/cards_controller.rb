@@ -3,24 +3,24 @@ class CardsController < ApplicationController
 
   # GET /cards
   def index
-    @cards = Card.all
+    cards = Card.all
 
-    render json: @cards
+    render json:cards
   end
 
   # GET /cards/1
   def show
-    render json: @card
+    render json: card
   end
 
   # POST /cards
   def create
-    @card = Card.new(card_params)
+    card = Card.new(card_params)
 
-    if @card.save
-      render json: @card, status: :created, location: @card
+    if card.save
+      render json: card, status: :created, location: card
     else
-      render json: @card.errors, status: :unprocessable_entity
+      render json: card.errors, status: :unprocessable_entity
     end
   end
 
@@ -46,6 +46,6 @@ class CardsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def card_params
-      params.require(:card).permit(:name)
+      params.require(:card).permit(:name, :welcome_o, :minimum_spend, :user_id)
     end
 end

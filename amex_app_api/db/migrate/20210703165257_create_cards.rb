@@ -4,7 +4,7 @@ class CreateCards < ActiveRecord::Migration[6.1]
       t.string "name"
       t.integer "welcome_o"
       t.integer "minimum_spend"
-      t.belongs_to :user
+      t.integer "user_id"
     end
   end
 end

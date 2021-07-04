@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_03_165257) do
+ActiveRecord::Schema.define(version: 2021_07_04_134058) do
 
   create_table "cards", force: :cascade do |t|
     t.string "name"
     t.integer "welcome_o"
     t.integer "minimum_spend"
     t.integer "user_id"
-    t.index ["user_id"], name: "index_cards_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "name"
+    t.integer "amount"
+    t.integer "category_id"
+    t.string "due_date"
   end
 
   create_table "users", force: :cascade do |t|
