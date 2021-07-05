@@ -15,6 +15,17 @@ class CategoryService{
         })
     }
 
+    getCategoryForSelect(){
+        fetch(`${this.endpoint}/categories`)
+        .then(resp => resp.json())
+        .then( categories => {
+            for (const category of categories ) {
+                const x = new Category (category)
+                debugger
+            }
+        })
+    }
+
     createCategory(){
         const category = {
             name: event.target.name.value

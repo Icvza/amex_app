@@ -29,5 +29,9 @@ Category.categoryForm.addEventListener('submit', handleSubmitCategory)
 function handleSubmitCategory() {
     event.preventDefault()
     categoryService.createCategory()
+}
 
+
+function somethingHandle(){
+    debugger
 }

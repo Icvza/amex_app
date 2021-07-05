@@ -19,7 +19,7 @@ class ExpenseService {
         const expense = {
             name: document.getElementById('name').value,
             amount: document.getElementById('amount').value,
-            category_id: 2,          
+            category_id: document.getElementById('category_id').value,         
             due_date: document.getElementById('due_date').value,   
         }
 

@@ -24,6 +24,7 @@ class Expense {
             <h3>${this.name}</h3>
             <p>${this.amount}</p>
             <p>${this.due_date}</p>
+            <p>${this.category_id}</p>
         </div>
         `
         return this.element
@@ -33,16 +34,18 @@ class Expense {
         Expense.expenseContainer.append(this.expenseHTML())
     }
 
+
     static renderFormexpense() {
         Expense.expenseForm.innerHTML += `
         <form id="new-expense-form">
         Name: <input type='text' id=name>
         amount: <input type="integer" id='amount'>
         due_date: <input type='text' id='due_date'>
+        Category ID number <input type='integer' id='category_id'>
+        something else to tes <input type='stings' id='somehting'>
         <input type="submit" id="create">
         </form>
         `
     }
-
-
+    
 }
